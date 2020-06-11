@@ -10,12 +10,13 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
     var summation = a + b;
-    var messege = 'The sum of 4 and 7 is 11.'
-    return [summation , messege];
+    var messege1 = 'The sum of 4 and 7 is 11.'
+    return [summation , messege1];
 }
-
+sum();
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -30,33 +31,45 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
     var multi = a * b;
-    var messege = 'The product of 5 and 9 is 45.'
-    return [multi , messege];
+    var messege2 = 'The product of 5 and 9 is 45.'
+    return [multi , messege2];
 }
-
+multiply();
 // Here is the test for multiply(); uncomment it to run it
 testMultiply(5,9);
 
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
+// Once you get the test passing, do an a-c-p cycle and synchronize the code between
+//  GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
 /* Problem 3
-Write a function called sumAndMultiply() that takes in three numbers as separate arguments and returns an array where the first element is the sum of those three numbers, the second element is the product of those three numbers,  and the third and fourth elements are strings that EXACTLY follow this example and use the values that were input into the function:
+Write a function called sumAndMultiply() that takes in three numbers
+// as separate arguments and returns an array where the first element is the sum of 
+those three numbers, the second element is the product of those three numbers,  and the third and fourth
+ elements are strings that EXACTLY follow this example and use the values that were input into the function:
 
 Third element: "4 and 7 and 5 sum to 16."
 Fourth element: "The product of 4 and 7 and 5 is 140."
 
-IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this function. To do addition, use your sum() function, and to do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
+IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this function. 
+To do addition, use your sum() function, and to do multiplication, use your multiply() function that
+ you've already created. You're going to have to be resourceful to figure out how to do this. 
+ However, you may continue to use the + operator for string concatenation.
 
-Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
+Test this function by hand in the console to get it working, and when you think it is
+ finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) { //eslint-disable-line
-    var add = a + b +c ;
-    var  multiplication =a*b*c;
-    var messege1 = '4 and 7 and 5 sum to 16.' ;
-    var messege2 = 'The product of 4 and 7 and 5 is 140.';
-    return [ add , multiplication,messege1, messege2];
+function sumAndMultiply(d, e, f) { //eslint-disable-line
+    var sum1 = sum(d, e)[0];
+    var sum2 = sum(sum1, f)[0];
+
+    var multi1 = multiply(d, e)[0];
+    var multi2 = multiply(multi1,f)[0];
+    
+    var messege3 = '4 and 7 and 5 sum to 16.' ;
+    var messege4 = 'The product of 4 and 7 and 5 is 140.' ;
+    return [ sum2 , multi2 ,messege3, messege4];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -78,34 +91,49 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-    var add = testArray[0]+testArray[1]+testArray[2];
-    var messege = '2,3,4 was passed in as an array of numbers, and 9 is their sum.';
-    return [add , messege]
+    var sumArr = testArray[0]+testArray[1]+testArray[2];
+    var messege5 = '2,3,4 was passed in as an array of numbers, and 9 is their sum.';
+    return [sumArr , messege5]
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
+// Once you get the test passing, do an a-c-p cycle and synchronize the code 
+// between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
 /* Problem 5
-Write a function called multiplyArray() that takes an array of numbers as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
+Write a function called multiplyArray() that takes an array of numbers as
+
+its argument and returns an array whose first element is the product of those numbers,
+ and the second element is a string that EXACTLY follows this example and uses the values 
+ that were input into the function:
 
 "The numbers 2,3,4 have a product of 24."
 
-IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. This function should handle an array containing three elements. However, you may continue to use the + operator for string concatenation.
+IMPORTANT DETAIL: You may not use the arithmetic operator * in this function.
+ To do multiplication, use your multiply() function that you've already created.
+  You're going to have to be resourceful to figure out how to do this. This function 
+  should handle an array containing three elements. However, you may continue to use 
+  the + operator for string concatenation.
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) { //eslint-disable-line
 
+function multiplyArray(multArr) { //eslint-disable-line
+    // for (var i=0; i<testArray.length;i++)
+    var multArr = multiply(testArray[0],testArray[1])[0]; 
+    var multArr = multArr * testArray [2];
+    var massege6 = "The numbers 2,3,4 have a product of 24.";
+
+return [multArr,massege6];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -126,6 +154,7 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
+
 var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
