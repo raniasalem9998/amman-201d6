@@ -29,7 +29,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-
+    var summation = a + b;
+    var message = 'The sum of 4 and 7 is 11.'
+    return [summation , message];
 }
 
 // Here is the test for multiply(); uncomment it to run it
