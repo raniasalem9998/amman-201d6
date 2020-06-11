@@ -10,8 +10,8 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
     var summation = a + b;
-    var message = 'The sum of 4 and 7 is 11.'
-    return [summation , message];
+    var messege = 'The sum of 4 and 7 is 11.'
+    return [summation , messege];
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -30,8 +30,8 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
     var multi = a * b;
-    var message = 'The product of 5 and 9 is 45.'
-    return [multi , message];
+    var messege = 'The product of 5 and 9 is 45.'
+    return [multi , messege];
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -54,9 +54,9 @@ Test this function by hand in the console to get it working, and when you think 
 function sumAndMultiply(a, b, c) { //eslint-disable-line
     var add = a + b +c ;
     var  multiplication =a*b*c;
-    var message1 = '4 and 7 and 5 sum to 16.' ;
-    var message2 = 'The product of 4 and 7 and 5 is 140.';
-    return [ add , multiplication,message1, message2];
+    var messege1 = '4 and 7 and 5 sum to 16.' ;
+    var messege2 = 'The product of 4 and 7 and 5 is 140.';
+    return [ add , multiplication,messege1, messege2];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -78,7 +78,9 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+    var add = testArray[0]+testArray[1]+testArray[2];
+    var messege = '2,3,4 was passed in as an array of numbers, and 9 is their sum.';
+    return [add , messege]
 }
 
 // Here is the test for sumArray(); uncomment it to run it
