@@ -10,7 +10,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
     var summation = a + b;
-    var messege1 = 'The sum of 4 and 7 is 11.'
+    var messege1 = 'The sum of '+ a + ' and '+ b + ' is '+ summation +'.'
     return [summation , messege1];
 }
 sum();
@@ -31,7 +31,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
     var multi = a * b;
-    var messege2 = 'The product of 5 and 9 is 45.'
+    var messege2 = 'The product of '+ a + ' and '+ b + ' is '+ multi +'.'
     return [multi , messege2];
 }
 multiply();
@@ -67,8 +67,8 @@ function sumAndMultiply(d, e, f) { //eslint-disable-line
     var multi1 = multiply(d, e)[0];
     var multi2 = multiply(multi1,f)[0];
     
-    var messege3 = '4 and 7 and 5 sum to 16.' ;
-    var messege4 = 'The product of 4 and 7 and 5 is 140.' ;
+    var messege3 = d +' and '+ e + ' and ' +f+' sum to '+sum2+'.' ;
+    var messege4 = 'The product of '+d+' and '+e+' and '+f+' is '+multi2+'.' ;
     return [ sum2 , multi2 ,messege3, messege4];
 }
 
@@ -125,11 +125,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 function multiplyArray(multArr) { //eslint-disable-line
     // for (var i=0; i<testArray.length;i++)
-    var multArr = multiply(testArray[0],testArray[1])[0]; 
-    var multArr = multArr * testArray [2];
-    var massege6 = "The numbers 2,3,4 have a product of 24.";
+    var multi = multiply(multArr[0],multArr[1])[0]; 
+    var multi2 = multi * multArr [2];
+    var massege6 = "The numbers "+multArr[0]+','+multArr[1]+','+multArr[2]+" have a product of "+multi2+'.';
 
-return [multArr,massege6];
+return [multi2,massege6];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
@@ -161,18 +161,29 @@ Test this function by hand in the console to get it working, and when you think 
  uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-// function multiplyArray(multArr) { //eslint-disable-line
-//     // for (var i=0; i<testArray.length;i++)
-//     var multArr = multiply(testArray[0],testArray[1])[0]; 
-//     var multArr = multArr * testArray [2];
-//     var massege6 = "The numbers 2,3,4 have a product of 24.";
-
-// return [multArr,massege6];
-// }
 var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 // function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 // console.log(testDynamicArray.length)
 // for (var i=0 ; i <= (testDynamicArray.length)-1 ; i++ ){
+    function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+        var prod=1;
+        var messege7="The numbers ";
+        for (var i=0; i<dynamicArray.length;i++){
+        prod = multiply(prod,dynamicArray[i])[0]; 
+        if (i < dynamicArray.length -1){
+            messege7 = messege7 + dynamicArray[i] + ',';
+        }
+            else{
+                messege7 =messege7 + dynamicArray[i];
+            }
+        }
+        
+        messege7 = messege7 + ' have a product of ' + prod +'.';
+        console.log(prod,messege7)
+        return[prod,messege7];
+    
+    }
+    testMultiplyAnyArray(testDynamicArray);
     
 // var product = multiply(testDynamicArray[i] , testDynamicArray[i+1])[0];
 // console.log(product);
